@@ -10,12 +10,12 @@ namespace AvaloniaGraphControl
     {
       var segments = new PathSegments();
       segments.AddRange(CreateRoundedRectangle(bounds, radius));
-      Figures = new PathFigures {
+      Figures = [
         new PathFigure {
           StartPoint = bounds.TopLeft + new Point(radius,0),
           Segments = segments
         }
-      };
+      ];
     }
 
     private static IEnumerable<PathSegment> CreateRoundedRectangle(Rect bounds, double radius)

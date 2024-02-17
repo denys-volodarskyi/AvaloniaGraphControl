@@ -63,7 +63,7 @@ namespace AvaloniaGraphControl
         LayoutAlgorithmSettings = CurrentLayoutSettings
       };
       graph.RootSubgraph.IsVisible = false;
-      vmOfCtrl = new Dictionary<Control, Wrapper>();
+      vmOfCtrl = [];
       foreach (var sgvm in parentVMs)
       {
         var sg = new Microsoft.Msagl.Drawing.Subgraph(sgvm.ID);

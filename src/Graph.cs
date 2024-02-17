@@ -8,7 +8,7 @@ namespace AvaloniaGraphControl
   {
     public Graph()
     {
-      Edges = new List<Edge>();
+      Edges = [];
       Parent = new Indexer<object, object>(k => hierarchy.GetValueOrDefault(k), (k, v) => hierarchy[k] = v);
       Orientation = Orientations.Vertical;
       HorizontalOrder = (x1, x2) => 0;
@@ -25,6 +25,6 @@ namespace AvaloniaGraphControl
     public Func<object, object, int> HorizontalOrder { get; set; }
     public Func<object, object, int> VerticalOrder { get; set; }
 
-    private readonly Dictionary<object, object> hierarchy = new Dictionary<object, object>();
+    private readonly Dictionary<object, object> hierarchy = [];
   }
 }

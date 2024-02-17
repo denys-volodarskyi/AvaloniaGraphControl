@@ -17,12 +17,7 @@ namespace AvaloniaGraphControl
       set => SetValue(BrushProperty, value);
     }
 
-    private readonly List<Drawing> Drawings;
-
-    public Connection()
-    {
-      this.Drawings = new List<Drawing>();
-    }
+    private readonly List<Drawing> Drawings = [];
 
     protected override Size ArrangeOverride(Size finalSize)
     {
@@ -54,10 +49,10 @@ namespace AvaloniaGraphControl
         Brush = fillBrush,
         Geometry = new PathGeometry
         {
-          Figures = new PathFigures
-          {
+          Figures =
+          [
             figure
-          }
+          ]
         }
       };
     }
